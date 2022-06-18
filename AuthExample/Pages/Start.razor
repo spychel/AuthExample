@@ -1,0 +1,26 @@
+﻿@page "/"
+<PageTitle>Обзор</PageTitle>
+
+<main class="main">
+    <div class="main__helper">
+        <div class="main-menu">
+                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Title="Новый проект"/>
+                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Title="Настройки системы"/>
+        </div>
+        <div class="separator separator_color_black separator_margin"></div>
+        <div class="last-projects main__last-projects">
+            <span class="last-projects__title">Последние проекты</span>
+            <ul class="last-projects__list">
+                <li class="last-projects__item">Блок№4_05.05.2022_Пуск</li>
+                <li class="last-projects__item">Блок№4_05.05.2022_Останов</li>
+                <li class="last-projects__item">Блок№4_12.03.2022_Пуск</li>
+                <li class="last-projects__item">Блок№4_01.01.2022_Останов</li>
+                <li class="last-projects__item">Блок№4_11.12.2021_Пуск</li>
+            </ul>
+            <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style last-projects__btn" Title="Архив"/>
+        </div>
+    </div>
+</main>
+@code {
+
+}

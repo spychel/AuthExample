@@ -1,0 +1,49 @@
+﻿.authorization {
+    width: 300px;
+    height: 208px;
+}
+
+.authorization__helper {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.authorization__title {
+    font: normal normal 20px/23px 'Roboto Cn';
+    text-align: center;
+    flex-basis: 100%;
+    text-transform: capitalize;
+    margin-bottom: 37px;
+}
+
+.authorization__login {
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.authorization__pswd {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.authorization__label {
+    font: normal normal 20px/23px 'Roboto Cn';
+    flex-basis: 30%;
+    text-transform: capitalize;
+}
+
+.authorization__input {
+    width: 198px;
+}
+
+
+
+::deep .authorization__btn {
+    margin-top: 50px;
+}

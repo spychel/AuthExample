@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.header {
+    height: 93px;
+    min-width: 620px;
+    max-width: 1920px;
+}
+
+.header_theme_orange {
+    background: #F27B19;
+}
+
+.header_shadow_inner {
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.55);
+}
+
+.header__helper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font: normal 300 30px/35px 'Roboto Lt';
+    text-transform: uppercase;
+}
+
+.header__title_text_color {
+    color: #FFFFFF;
+}
+
