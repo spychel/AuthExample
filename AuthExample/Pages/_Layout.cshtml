@@ -6,13 +6,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link href="AuthExample.styles.css" rel="stylesheet"/>
     <link href="css/Fonts.css" rel="stylesheet"/>
     <link href="css/normalize.css" rel="stylesheet"/>
     <link href="images/favicon_16.ico" rel="shortcut icon" type="image/x-icon" />
+    <base href="~/" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body class="page-body">
     @RenderBody()
+    
+    <script src="_framework/blazor.server.js"></script>
 </body>
 </html>

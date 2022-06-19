@@ -1,0 +1,24 @@
+﻿@page "/create"
+
+<PageTitle> Create a user</PageTitle>
+
+<EditForm Model="user" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+     <label for="name">Имя пользователя (логин):</label>
+     <InputText @bind-Value=user.Login id="name"/>
+     <label for="password">Пароль пользователя:</label>
+     <InputText @bind-Value=user.Password id="password" type="password"/>
+     <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" BtnType="submit" Title="Создать"/>
+</EditForm>
+
+
+@code {
+    User user = new User();
+
+    public void HandleValidSubmit()
+    {
+        Console.WriteLine($" {user.Login} ---- {user.Password} ");
+    }
+
+}

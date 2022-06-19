@@ -1,9 +1,10 @@
-﻿<button class="@Classes">@Title</button>
+﻿<button class="@Classes" type="@BtnType">@Title</button>
 
 @code {
     [Parameter]
     public string Classes { get; set;} = string.Empty;
     [Parameter]
     public string Title { get; set; } = string.Empty;
-
+    [Parameter]
+    public string BtnType { get; set; } = string.Empty;
 }

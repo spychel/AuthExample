@@ -4,12 +4,12 @@ namespace AuthExample.Data
 {
     public class User
     {
-      /*  [Key]
-        public int Id { get; set; }*/
-
-        [Required(ErrorMessage = "Error")]
+        [Required]
+        [StringLength(50, ErrorMessage = $"Длина имени пользователя не должна превышать 50 символов")]
+        [MinLength(3, ErrorMessage = $"Длина имени пользователя должна быть более 3-х символов")]
         public string Login { get; set; }
-        [Required(ErrorMessage = "Error")]
+
+        [Required]
         public string Password { get; set; }
     }
 }
