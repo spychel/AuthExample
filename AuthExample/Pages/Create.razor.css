@@ -1,0 +1,37 @@
+﻿.form-group {
+    display: flex;
+    justify-content: space-between;
+    font: normal normal 20px/23px 'Roboto Cn';
+    margin-bottom: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font: normal normal 25px/25px 'Roboto Cn';
+}
+
+
+.form-wrapper {
+    width: 490px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-content: center;
+    justify-content:center;
+
+}
+
+
+::deep select {
+    width: 208px;
+}
+
+::deep input {
+    width: 200px;
+}

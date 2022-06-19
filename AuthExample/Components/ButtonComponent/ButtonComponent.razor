@@ -1,4 +1,4 @@
-﻿<button class="@Classes" type="@BtnType">@Title</button>
+﻿<button class="@Classes" type="@BtnType" @onclick="Click">@Title</button>
 
 @code {
     [Parameter]
@@ -7,4 +7,7 @@
     public string Title { get; set; } = string.Empty;
     [Parameter]
     public string BtnType { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback Click { get; set; }
 }

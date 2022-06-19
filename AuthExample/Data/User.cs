@@ -11,5 +11,13 @@ namespace AuthExample.Data
 
         [Required]
         public string Password { get; set; }
+
+        public Role Role { get; set; } = Role.User;
+    }
+
+    public enum Role
+    {
+        Administrator,
+        User
     }
 }

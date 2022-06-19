@@ -4,21 +4,49 @@
 
 <EditForm Model="user" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator />
-    <ValidationSummary />
-     <label for="name">Имя пользователя (логин):</label>
-     <InputText @bind-Value=user.Login id="name"/>
-     <label for="password">Пароль пользователя:</label>
-     <InputText @bind-Value=user.Password id="password" type="password"/>
-     <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" BtnType="submit" Title="Создать"/>
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <h3 class="title">Форма создания нового пользователя</h3>
+            <div class="form-group">
+                 <label for="name">Имя пользователя (логин):</label>
+                 <InputText @bind-Value=user.Login id="name"/>
+            </div>
+            <div class="form-group">
+                 <label for="password">Пароль пользователя:</label>
+                 <InputText @bind-Value=user.Password id="password" type="password"/>
+            </div>
+            <div class="form-group">
+                 <label for="role">Роль пользователя:</label>
+                 <InputSelect id="role" @bind-Value=user.Role >
+                    @foreach (var role in Enum.GetValues(typeof(Role)))
+                    {
+                        <option value="@role"> 
+                            @(Role.User.CompareTo(role) == 0 ? "Пользователь" : "Администратор") 
+                        </option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group">
+                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" BtnType="submit" Title="Создать"/>
+                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Click="CancelHandler" Title="Отмена" />
+            </div>
+        </div>
+    </div>
 </EditForm>
 
 
 @code {
+    [Inject]
+    NavigationManager navigationManager { get; set; }
+
     User user = new User();
 
     public void HandleValidSubmit()
     {
-        Console.WriteLine($" {user.Login} ---- {user.Password} ");
+        Console.WriteLine($"Пользователь создан {user.Login} ---- {user.Password} --- { user.Role } ");
     }
+
+    
+    async Task CancelHandler() => navigationManager.NavigateTo("/list");
 
 }

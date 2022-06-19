@@ -1,22 +1,25 @@
 ﻿.btn {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    height:40px;
-    cursor: pointer;
-}
-
-.btn_title_style {
+    height: 40px;
     font: normal 300 20px/23px 'Roboto Lt';
     color: #FFFFFF;
-}
-
-.btn:hover {
-    box-shadow: inset 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-.btn_bg_blue {
+    cursor: pointer;
     background-color: #002552;
 }
+
+    .btn:hover {
+        border: 4px solid #F27B19;
+        border: 4px solid #F9BD8C;
+    }
+
+    .btn:active {
+        border: 4px solid #F27B19;
+    }
+
+    .btn:disabled {
+        background-color: #8092A9;
+        pointer-events: none;
+    }
 
 .btn_capitalize {
     text-transform: capitalize;
@@ -34,6 +37,3 @@
     width: 220px;
 }
 
-.btn_size_l {
-    width: 400px;
-}
