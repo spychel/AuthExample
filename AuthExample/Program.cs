@@ -11,6 +11,11 @@ builder.Services.AddDbContext<IdentityContext>(options =>
 });
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 
+builder.Services.AddDbContext<AuthExample.Data.DataContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("UsersConnection"));
+});
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 

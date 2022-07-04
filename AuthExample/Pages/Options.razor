@@ -1,0 +1,19 @@
+﻿@page "/options"
+<h3>Options</h3>
+
+<EditForm Model=@option>
+    <InputSelect id="tgSelect" class="" @bind-Value="option.SelectedTg" >
+        <option value=4>Турбоагрегат №4</option>
+    </InputSelect>
+
+    <input type="datetime-local" @bind-value="option.BeginTime" />
+    <input type="datetime-local" @bind-value="option.EndTime" />
+
+    <button type="button">Пуск</button>
+    <button type="button">Останов</button>
+</EditForm>
+
+@code {
+    public int SelectedTg { get; set; } = default;
+    public Option option = new Option();
+}

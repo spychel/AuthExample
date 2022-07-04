@@ -4,7 +4,7 @@
 <main class="main">
     <div class="main__helper">
         <div class="main-menu">
-                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Title="Новый проект"/>
+                <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Title="Новый проект" Click="NewProjectBtnClick"/>
                 <ButtonComponent Classes="btn btn_size_m btn_bg_blue btn_title_style" Title="Настройки системы"/>
         </div>
         <div class="separator separator_color_black separator_margin"></div>
@@ -22,5 +22,9 @@
     </div>
 </main>
 @code {
-
+    [Inject] NavigationManager? NavManager { get; set; }
+    void NewProjectBtnClick()
+    {
+        NavManager.NavigateTo("/options");
+    }
 }
